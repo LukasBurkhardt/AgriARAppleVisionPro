@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B2728582CABE43300583E3B /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 7B2728572CABE43300583E3B /* RealityKitContent */; };
+		7B27285A2CABE43300583E3B /* AgriARVisonProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2728592CABE43300583E3B /* AgriARVisonProApp.swift */; };
+		7B27285C2CABE43300583E3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27285B2CABE43300583E3B /* ContentView.swift */; };
+		7B27285E2CABE43300583E3B /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27285D2CABE43300583E3B /* ImmersiveView.swift */; };
+		7B2728602CABE43300583E3B /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 7B27285F2CABE43300583E3B /* ImageBasedLighting.skybox */; };
+		7B2728622CABE43600583E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2728612CABE43600583E3B /* Assets.xcassets */; };
+		7B2728652CABE43600583E3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2728642CABE43600583E3B /* Preview Assets.xcassets */; };
+		7B2728702CABE43600583E3B /* AgriARVisonProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27286F2CABE43600583E3B /* AgriARVisonProTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B27286C2CABE43600583E3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B27284A2CABE43300583E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B2728512CABE43300583E3B;
+			remoteInfo = AgriARVisonPro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B2728522CABE43300583E3B /* AgriARVisonPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgriARVisonPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2728562CABE43300583E3B /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		7B2728592CABE43300583E3B /* AgriARVisonProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgriARVisonProApp.swift; sourceTree = "<group>"; };
+		7B27285B2CABE43300583E3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7B27285D2CABE43300583E3B /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		7B27285F2CABE43300583E3B /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
+		7B2728612CABE43600583E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B2728642CABE43600583E3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7B2728662CABE43600583E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B27286B2CABE43600583E3B /* AgriARVisonProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgriARVisonProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B27286F2CABE43600583E3B /* AgriARVisonProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgriARVisonProTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B27284F2CABE43300583E3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2728582CABE43300583E3B /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B2728682CABE43600583E3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B2728492CABE43300583E3B = {
+			isa = PBXGroup;
+			children = (
+				7B2728542CABE43300583E3B /* AgriARVisonPro */,
+				7B2728552CABE43300583E3B /* Packages */,
+				7B27286E2CABE43600583E3B /* AgriARVisonProTests */,
+				7B2728532CABE43300583E3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B2728532CABE43300583E3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B2728522CABE43300583E3B /* AgriARVisonPro.app */,
+				7B27286B2CABE43600583E3B /* AgriARVisonProTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B2728542CABE43300583E3B /* AgriARVisonPro */ = {
+			isa = PBXGroup;
+			children = (
+				7B2728592CABE43300583E3B /* AgriARVisonProApp.swift */,
+				7B27285B2CABE43300583E3B /* ContentView.swift */,
+				7B27285D2CABE43300583E3B /* ImmersiveView.swift */,
+				7B27285F2CABE43300583E3B /* ImageBasedLighting.skybox */,
+				7B2728612CABE43600583E3B /* Assets.xcassets */,
+				7B2728662CABE43600583E3B /* Info.plist */,
+				7B2728632CABE43600583E3B /* Preview Content */,
+			);
+			path = AgriARVisonPro;
+			sourceTree = "<group>";
+		};
+		7B2728552CABE43300583E3B /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				7B2728562CABE43300583E3B /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		7B2728632CABE43600583E3B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7B2728642CABE43600583E3B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7B27286E2CABE43600583E3B /* AgriARVisonProTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B27286F2CABE43600583E3B /* AgriARVisonProTests.swift */,
+			);
+			path = AgriARVisonProTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B2728512CABE43300583E3B /* AgriARVisonPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B2728732CABE43600583E3B /* Build configuration list for PBXNativeTarget "AgriARVisonPro" */;
+			buildPhases = (
+				7B27284E2CABE43300583E3B /* Sources */,
+				7B27284F2CABE43300583E3B /* Frameworks */,
+				7B2728502CABE43300583E3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AgriARVisonPro;
+			packageProductDependencies = (
+				7B2728572CABE43300583E3B /* RealityKitContent */,
+			);
+			productName = AgriARVisonPro;
+			productReference = 7B2728522CABE43300583E3B /* AgriARVisonPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B27286A2CABE43600583E3B /* AgriARVisonProTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B2728762CABE43600583E3B /* Build configuration list for PBXNativeTarget "AgriARVisonProTests" */;
+			buildPhases = (
+				7B2728672CABE43600583E3B /* Sources */,
+				7B2728682CABE43600583E3B /* Frameworks */,
+				7B2728692CABE43600583E3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B27286D2CABE43600583E3B /* PBXTargetDependency */,
+			);
+			name = AgriARVisonProTests;
+			productName = AgriARVisonProTests;
+			productReference = 7B27286B2CABE43600583E3B /* AgriARVisonProTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B27284A2CABE43300583E3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					7B2728512CABE43300583E3B = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					7B27286A2CABE43600583E3B = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 7B2728512CABE43300583E3B;
+					};
+				};
+			};
+			buildConfigurationList = 7B27284D2CABE43300583E3B /* Build configuration list for PBXProject "AgriARVisonPro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B2728492CABE43300583E3B;
+			productRefGroup = 7B2728532CABE43300583E3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B2728512CABE43300583E3B /* AgriARVisonPro */,
+				7B27286A2CABE43600583E3B /* AgriARVisonProTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B2728502CABE43300583E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2728622CABE43600583E3B /* Assets.xcassets in Resources */,
+				7B2728652CABE43600583E3B /* Preview Assets.xcassets in Resources */,
+				7B2728602CABE43300583E3B /* ImageBasedLighting.skybox in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B2728692CABE43600583E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B27284E2CABE43300583E3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B27285C2CABE43300583E3B /* ContentView.swift in Sources */,
+				7B27285A2CABE43300583E3B /* AgriARVisonProApp.swift in Sources */,
+				7B27285E2CABE43300583E3B /* ImmersiveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B2728672CABE43600583E3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2728702CABE43600583E3B /* AgriARVisonProTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B27286D2CABE43600583E3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B2728512CABE43300583E3B /* AgriARVisonPro */;
+			targetProxy = 7B27286C2CABE43600583E3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7B2728712CABE43600583E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		7B2728722CABE43600583E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		7B2728742CABE43600583E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AgriARVisonPro/Preview Content\"";
+				DEVELOPMENT_TEAM = M4KNSPSTDB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lukasburkhardt.AgriARVisonPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		7B2728752CABE43600583E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AgriARVisonPro/Preview Content\"";
+				DEVELOPMENT_TEAM = M4KNSPSTDB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lukasburkhardt.AgriARVisonPro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		7B2728772CABE43600583E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4KNSPSTDB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lukasburkhardt.AgriARVisonProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgriARVisonPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AgriARVisonPro";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		7B2728782CABE43600583E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M4KNSPSTDB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lukasburkhardt.AgriARVisonProTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgriARVisonPro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AgriARVisonPro";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B27284D2CABE43300583E3B /* Build configuration list for PBXProject "AgriARVisonPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2728712CABE43600583E3B /* Debug */,
+				7B2728722CABE43600583E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B2728732CABE43600583E3B /* Build configuration list for PBXNativeTarget "AgriARVisonPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2728742CABE43600583E3B /* Debug */,
+				7B2728752CABE43600583E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B2728762CABE43600583E3B /* Build configuration list for PBXNativeTarget "AgriARVisonProTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B2728772CABE43600583E3B /* Debug */,
+				7B2728782CABE43600583E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B2728572CABE43300583E3B /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7B27284A2CABE43300583E3B /* Project object */;
+}
