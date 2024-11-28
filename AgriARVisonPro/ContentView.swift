@@ -18,7 +18,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("Apple Vision Pro Object Detection")
+            Text("Applee Vision Pro Object Detection")
                 .font(.headline)
                 .padding()
 
