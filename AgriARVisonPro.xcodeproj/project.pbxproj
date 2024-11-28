@@ -15,6 +15,8 @@
 		7B2728622CABE43600583E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2728612CABE43600583E3B /* Assets.xcassets */; };
 		7B2728652CABE43600583E3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2728642CABE43600583E3B /* Preview Assets.xcassets */; };
 		7B2728702CABE43600583E3B /* AgriARVisonProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27286F2CABE43600583E3B /* AgriARVisonProTests.swift */; };
+		7B5FD9E42CF8B87B00E0532F /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FD9E32CF8B87600E0532F /* CameraManager.swift */; };
+		7B5FD9EA2CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		7B2728662CABE43600583E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B27286B2CABE43600583E3B /* AgriARVisonProTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgriARVisonProTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B27286F2CABE43600583E3B /* AgriARVisonProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgriARVisonProTests.swift; sourceTree = "<group>"; };
+		7B5FD9E32CF8B87600E0532F /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitsObjectDetectorVisionOS.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 		7B2728542CABE43300583E3B /* AgriARVisonPro */ = {
 			isa = PBXGroup;
 			children = (
+				7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */,
+				7B5FD9E32CF8B87600E0532F /* CameraManager.swift */,
 				7B2728592CABE43300583E3B /* AgriARVisonProApp.swift */,
 				7B27285B2CABE43300583E3B /* ContentView.swift */,
 				7B27285D2CABE43300583E3B /* ImmersiveView.swift */,
@@ -223,6 +229,8 @@
 			files = (
 				7B27285C2CABE43300583E3B /* ContentView.swift in Sources */,
 				7B27285A2CABE43300583E3B /* AgriARVisonProApp.swift in Sources */,
+				7B5FD9EA2CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel in Sources */,
+				7B5FD9E42CF8B87B00E0532F /* CameraManager.swift in Sources */,
 				7B27285E2CABE43300583E3B /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +313,7 @@
 				SDKROOT = xros;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				XROS_DEPLOYMENT_TARGET = 1.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -361,7 +369,7 @@
 				SDKROOT = xros;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
-				XROS_DEPLOYMENT_TARGET = 1.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -388,6 +396,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
 		};
@@ -414,6 +423,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
 		};

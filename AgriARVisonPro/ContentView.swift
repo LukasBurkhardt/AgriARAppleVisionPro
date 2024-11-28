@@ -8,25 +8,26 @@
 import SwiftUI
 import Vision
 import AVFoundation
- 
- 
+
+// Only For Testing L
 struct ContentView: View {
+    @State private var cameraManager = CameraManager()
     @State private var detectionResults: [VNRecognizedObjectObservation] = []
-    @State private var timer: Timer?
     @State private var isRunning = false
-    @State private var modelIsLoaded = false
 
     var body: some View {
         VStack {
-            Text("Applee Vision Pro Object Detection")
+            Text("Apple Vision Pro Object Detection")
                 .font(.headline)
                 .padding()
 
             Button(isRunning ? "Stop Detection" : "Start Detection") {
                 if isRunning {
-                    stopDetection()
+                    cameraManager.stopCamera()
+                    isRunning = false
                 } else {
-                    startDetection()
+                    cameraManager.startCamera()
+                    isRunning = true
                 }
             }
             .padding()
@@ -47,62 +48,43 @@ struct ContentView: View {
                     .padding(.top, 20)
             }
         }
-        .padding()
+        .onAppear {
+            // PixelBuffer von CameraManager empfangen und mit Vision verarbeiten
+            cameraManager.onPixelBufferCaptured = { pixelBuffer in
+                processPixelBuffer(pixelBuffer)
+            }
+        }
+        .onDisappear {
+            cameraManager.stopCamera()
+        }
     }
 
-    func startDetection() {
-        guard let modelURL = Bundle.main.url(forResource: "FruitsObjectDetector", withExtension: "mlmodelc") else {
-            print("ML Model not found!")
+    /// Vision-Modell laden und PixelBuffer analysieren
+    func processPixelBuffer(_ pixelBuffer: CVPixelBuffer) {
+        guard let modelURL = Bundle.main.url(forResource: "FruitsObjectDetectorVisionOS", withExtension: "mlmodelc"),
+              let compiledModel = try? MLModel(contentsOf: modelURL) else {
+            print("Failed to load ML model.")
             return
         }
 
         do {
-            let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelURL))
-            modelIsLoaded = true
-
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                captureAndDetect(with: visionModel)
-            }
-            isRunning = true
-        } catch {
-            print("Failed to load Vision model: \(error)")
-        }
-    }
-
-    func stopDetection() {
-        timer?.invalidate()
-        timer = nil
-        isRunning = false
-    }
-
-    func captureAndDetect(with model: VNCoreMLModel) {
-        let request = VNCoreMLRequest(model: model) { request, error in
-            if let results = request.results as? [VNRecognizedObjectObservation] {
-                DispatchQueue.main.async {
-                    self.detectionResults = results
+            let visionModel = try VNCoreMLModel(for: compiledModel)
+            let request = VNCoreMLRequest(model: visionModel) { request, error in
+                if let results = request.results as? [VNRecognizedObjectObservation] {
+                    DispatchQueue.main.async {
+                        self.detectionResults = results
+                    }
+                } else if let error = error {
+                    print("Error during Vision request: \(error)")
                 }
-            } else if let error = error {
-                print("Error during detection: \(error)")
             }
-        }
 
-        guard let pixelBuffer = capturePixelBuffer() else {
-            print("Failed to capture image")
-            return
-        }
-
-        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
-        do {
+            let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
             try handler.perform([request])
-        } catch {
-            print("Error performing request: \(error)")
-        }
-    }
 
-    func capturePixelBuffer() -> CVPixelBuffer? {
-        // Hier sollte die Logik implementiert werden, um ein Bild von der Apple Vision Pro Kamera zu erhalten.
-        // Für Demonstrationszwecke wird hier ein Dummy zurückgegeben.
-        return nil
+        } catch {
+            print("Error creating Vision model or performing request: \(error)")
+        }
     }
 }
 
