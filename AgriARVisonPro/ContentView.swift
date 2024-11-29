@@ -48,6 +48,7 @@ struct ContentView: View {
                     .padding(.top, 20)
             }
         }
+        // Ein Callback wird gesetzt (cameraManager.onPixelBufferCaptured), der jedes erfasste Bild (CVPixelBuffer) an die Methode processPixelBuffer(_:) weiterleitet.
         .onAppear {
             // PixelBuffer von CameraManager empfangen und mit Vision verarbeiten
             cameraManager.onPixelBufferCaptured = { pixelBuffer in
@@ -60,6 +61,7 @@ struct ContentView: View {
     }
 
     /// Vision-Modell laden und PixelBuffer analysieren
+    /// Ergebnisse (VNRecognizedObjectObservation) werden in die Liste detectionResults geschrieben.
     func processPixelBuffer(_ pixelBuffer: CVPixelBuffer) {
         guard let modelURL = Bundle.main.url(forResource: "ObjectDetector", withExtension: "mlmodelc"),
         //guard let modelURL = Bundle.main.url(forResource: "FruitsObjectDetectorVisionOS", withExtension: "mlmodelc"),

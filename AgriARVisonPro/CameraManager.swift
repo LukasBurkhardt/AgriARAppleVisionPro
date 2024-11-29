@@ -6,6 +6,9 @@
 //
 import AVFoundation
 
+//  Hauptlogik zur Nutzung der Kamera,
+//  um Videodatenframes zu erfassen und an eine Callback-Funktion weiterzugeben.
+
 class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     private var captureSession: AVCaptureSession?
     var onPixelBufferCaptured: ((CVPixelBuffer) -> Void)?
@@ -27,7 +30,7 @@ class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
             return
         }
 
-        let videoOutput = AVCaptureVideoDataOutput()
+        let videoOutput = AVCaptureVideoDataOutput() // AVCaptureVideoDataOutput gibt die Videoframes in einem für die Weiterverarbeitung geeigneten Format zurück.
         let queue = DispatchQueue(label: "videoQueue")
         videoOutput.setSampleBufferDelegate(self, queue: queue)
 
