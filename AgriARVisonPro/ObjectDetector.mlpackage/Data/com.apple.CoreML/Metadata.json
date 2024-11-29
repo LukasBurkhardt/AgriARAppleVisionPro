@@ -1,0 +1,20 @@
+{
+  "MLModelDescriptionKey" : "Object detector trained to identify 6 breakfast foods",
+  "MLModelCreatorDefinedKey" : {
+    "version" : "1",
+    "training_iterations" : "4000",
+    "classes" : "Bagel,Banana,Coffee,Croissant,Egg,Waffle",
+    "feature" : "image",
+    "non_maximum_suppression_threshold" : "0.45",
+    "include_non_maximum_suppression" : "True",
+    "type" : "ObjectDetector",
+    "iou_threshold" : "0.45",
+    "confidence_threshold" : "0.25",
+    "annotations" : "annotation",
+    "turicreate_version" : "4.3.2",
+    "max_iterations" : "0",
+    "model" : "darknet-yolo"
+  },
+  "MLModelAuthorKey" : "Apple Inc.",
+  "MLModelLicenseKey" : "MIT"
+}
