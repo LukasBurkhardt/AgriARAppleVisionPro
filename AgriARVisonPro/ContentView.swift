@@ -61,7 +61,8 @@ struct ContentView: View {
 
     /// Vision-Modell laden und PixelBuffer analysieren
     func processPixelBuffer(_ pixelBuffer: CVPixelBuffer) {
-        guard let modelURL = Bundle.main.url(forResource: "FruitsObjectDetectorVisionOS", withExtension: "mlmodelc"),
+        guard let modelURL = Bundle.main.url(forResource: "ObjectDetector", withExtension: "mlmodelc"),
+        //guard let modelURL = Bundle.main.url(forResource: "FruitsObjectDetectorVisionOS", withExtension: "mlmodelc"),
               let compiledModel = try? MLModel(contentsOf: modelURL) else {
             print("Failed to load ML model.")
             return

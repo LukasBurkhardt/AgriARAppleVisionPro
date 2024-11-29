@@ -17,6 +17,7 @@
 		7B2728702CABE43600583E3B /* AgriARVisonProTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B27286F2CABE43600583E3B /* AgriARVisonProTests.swift */; };
 		7B5FD9E42CF8B87B00E0532F /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FD9E32CF8B87600E0532F /* CameraManager.swift */; };
 		7B5FD9EA2CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */; };
+		7B5FD9EC2CF9CF1400E0532F /* ObjectDetector.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FD9EB2CF9CF1400E0532F /* ObjectDetector.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		7B27286F2CABE43600583E3B /* AgriARVisonProTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgriARVisonProTests.swift; sourceTree = "<group>"; };
 		7B5FD9E32CF8B87600E0532F /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitsObjectDetectorVisionOS.mlmodel; sourceTree = "<group>"; };
+		7B5FD9EB2CF9CF1400E0532F /* ObjectDetector.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetector.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		7B2728542CABE43300583E3B /* AgriARVisonPro */ = {
 			isa = PBXGroup;
 			children = (
+				7B5FD9EB2CF9CF1400E0532F /* ObjectDetector.mlmodel */,
 				7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */,
 				7B5FD9E32CF8B87600E0532F /* CameraManager.swift */,
 				7B2728592CABE43300583E3B /* AgriARVisonProApp.swift */,
@@ -230,6 +233,7 @@
 				7B27285C2CABE43300583E3B /* ContentView.swift in Sources */,
 				7B27285A2CABE43300583E3B /* AgriARVisonProApp.swift in Sources */,
 				7B5FD9EA2CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel in Sources */,
+				7B5FD9EC2CF9CF1400E0532F /* ObjectDetector.mlmodel in Sources */,
 				7B5FD9E42CF8B87B00E0532F /* CameraManager.swift in Sources */,
 				7B27285E2CABE43300583E3B /* ImmersiveView.swift in Sources */,
 			);
