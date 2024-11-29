@@ -8,7 +8,7 @@ import AVFoundation
 
 //  Hauptlogik zur Nutzung der Kamera,
 //  um Videodatenframes zu erfassen und an eine Callback-Funktion weiterzugeben.
-
+// precisionRecallCurves
 class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     private var captureSession: AVCaptureSession?
     var onPixelBufferCaptured: ((CVPixelBuffer) -> Void)?

@@ -63,13 +63,13 @@ struct ContentView: View {
     /// Vision-Modell laden und PixelBuffer analysieren
     /// Ergebnisse (VNRecognizedObjectObservation) werden in die Liste detectionResults geschrieben.
     func processPixelBuffer(_ pixelBuffer: CVPixelBuffer) {
-        guard let modelURL = Bundle.main.url(forResource: "ObjectDetector", withExtension: "mlmodelc"),
+        guard let modelURL = Bundle.main.url(forResource: "FruitsObjectDetectorVisionOS", withExtension: "mlmodelc"),
         //guard let modelURL = Bundle.main.url(forResource: "FruitsObjectDetectorVisionOS", withExtension: "mlmodelc"),
               let compiledModel = try? MLModel(contentsOf: modelURL) else {
             print("Failed to load ML model.")
             return
         }
-
+        
         do {
             let visionModel = try VNCoreMLModel(for: compiledModel)
             let request = VNCoreMLRequest(model: visionModel) { request, error in
