@@ -18,6 +18,7 @@
 		7B5FD9E42CF8B87B00E0532F /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FD9E32CF8B87600E0532F /* CameraManager.swift */; };
 		7B5FD9EA2CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */; };
 		7B5FD9EE2CFA009500E0532F /* ObjectDetector.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FD9ED2CFA009500E0532F /* ObjectDetector.mlpackage */; };
+		7B718AC92D09E8720084466B /* CameraManager3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B718AC82D09E86D0084466B /* CameraManager3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		7B5FD9E32CF8B87600E0532F /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitsObjectDetectorVisionOS.mlmodel; sourceTree = "<group>"; };
 		7B5FD9ED2CFA009500E0532F /* ObjectDetector.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = ObjectDetector.mlpackage; sourceTree = "<group>"; };
+		7B718AC82D09E86D0084466B /* CameraManager3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		7B2728542CABE43300583E3B /* AgriARVisonPro */ = {
 			isa = PBXGroup;
 			children = (
+				7B718AC82D09E86D0084466B /* CameraManager3.swift */,
 				7B5FD9ED2CFA009500E0532F /* ObjectDetector.mlpackage */,
 				7B5FD9E92CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel */,
 				7B5FD9E32CF8B87600E0532F /* CameraManager.swift */,
@@ -234,6 +237,7 @@
 				7B27285A2CABE43300583E3B /* AgriARVisonProApp.swift in Sources */,
 				7B5FD9EA2CF8BA8100E0532F /* FruitsObjectDetectorVisionOS.mlmodel in Sources */,
 				7B5FD9EE2CFA009500E0532F /* ObjectDetector.mlpackage in Sources */,
+				7B718AC92D09E8720084466B /* CameraManager3.swift in Sources */,
 				7B5FD9E42CF8B87B00E0532F /* CameraManager.swift in Sources */,
 				7B27285E2CABE43300583E3B /* ImmersiveView.swift in Sources */,
 			);
@@ -389,6 +393,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,7 +401,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = lukasburkhardt.AgriARVisonPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTED_PLATFORMS = "xrsimulator xros";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
@@ -416,6 +421,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,7 +429,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = lukasburkhardt.AgriARVisonPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SUPPORTED_PLATFORMS = "xrsimulator xros";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";

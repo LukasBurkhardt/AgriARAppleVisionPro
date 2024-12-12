@@ -4,57 +4,82 @@
 //
 //  Created by Lukas Burkhardt on 28.11.24.
 //
+import SwiftUI
 import AVFoundation
+import RealityKit
+import Vision
 
-//  Hauptlogik zur Nutzung der Kamera,
-//  um Videodatenframes zu erfassen und an eine Callback-Funktion weiterzugeben.
-// precisionRecallCurves
-class CameraManager: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
-    private var captureSession: AVCaptureSession?
-    var onPixelBufferCaptured: ((CVPixelBuffer) -> Void)?
+/*
+struct CameraView: View {
+    var body: some View {
+        CameraRealityView()
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+ */
 
-    func startCamera() {
-        let captureSession = AVCaptureSession()
-        guard let captureDevice = AVCaptureDevice.default(for: .video) else {
-            print("No camera available.")
-            return
-        }
-
-        do {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
-            if captureSession.canAddInput(input) {
-                captureSession.addInput(input)
-            }
-        } catch {
-            print("Error configuring camera input: \(error)")
-            return
-        }
-
-        let videoOutput = AVCaptureVideoDataOutput() // AVCaptureVideoDataOutput gibt die Videoframes in einem für die Weiterverarbeitung geeigneten Format zurück.
-        let queue = DispatchQueue(label: "videoQueue")
-        videoOutput.setSampleBufferDelegate(self, queue: queue)
-
-        if captureSession.canAddOutput(videoOutput) {
-            captureSession.addOutput(videoOutput)
-        }
-
-        self.captureSession = captureSession
-        captureSession.startRunning()
+/*
+struct CameraRealityView: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> CameraViewController {
+        let cameraViewController = CameraViewController()
+        return cameraViewController
     }
 
-    func stopCamera() {
-        captureSession?.stopRunning()
-        captureSession = nil
-    }
+    func updateUIViewController(_ uiViewController: CameraViewController, context: Context) {}
+}
+ */
 
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
-            print("Failed to get pixel buffer.")
-            return
+
+/************************/
+
+/*
+struct CameraView: View {
+    var body: some View {
+        RealityView { content in
+            // Hier können zusätzliche 3D-Inhalte hinzugefügt werden
         }
-
-        // Callback mit dem PixelBuffer
-        onPixelBufferCaptured?(pixelBuffer)
+        .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            CameraViewController.shared.startSession()
+        }
+        .onDisappear {
+            CameraViewController.shared.stopSession()
+        }
     }
 }
 
+class CameraViewController: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
+    static let shared = CameraViewController()
+    private let captureSession = AVCaptureSession()
+
+    func startSession() {
+        guard let captureDevice = AVCaptureDevice.default(for: .video),
+              let input = try? AVCaptureDeviceInput(device: captureDevice) else {
+            print("Keine Kamera verfügbar.")
+            return
+        }
+
+        if captureSession.inputs.isEmpty {
+            captureSession.addInput(input)
+        }
+
+        let videoOutput = AVCaptureVideoDataOutput()
+        videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+
+        if captureSession.outputs.isEmpty {
+            captureSession.addOutput(videoOutput)
+        }
+
+        captureSession.startRunning()
+    }
+
+    func stopSession() {
+        captureSession.stopRunning()
+    }
+
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        // Hier kann Bildverarbeitung oder Vision-Framework-Integration erfolgen
+    }
+}
+
+*/
